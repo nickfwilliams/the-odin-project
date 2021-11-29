@@ -1,0 +1,23 @@
+body {
+    background-color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.title {
+    color: black;
+}
+
+.heading {
+    font-size: 32px;
+    color: orange;
+}
+
+.link {
+    color: #ffff00;
+}
+
+.recipe-pic {
+    height: auto;
+    width: 250px;
+}
