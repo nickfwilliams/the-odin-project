@@ -1,1 +1,0 @@
-This project is part of the Odin Project introductory course. This project will focus on the basic elements of HTML and we'll return later to style it with CSS.
