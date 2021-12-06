@@ -1,0 +1,202 @@
+/*  RESETS */ 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER & NAV */
+
+.header {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+    padding: 0.7em 0.7em 2em 0.7em;
+}
+
+.header-container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9faf8;
+}
+
+.header a {
+    font-size: 18px;
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+ul.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    background-color: #1f2937;
+    padding: 4em 0;
+}
+
+.hero-container {
+    display: flex;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    width: 350px;
+    margin-right: 50px;
+}
+
+.hero img {
+    max-width: 350px;
+    border-radius: 5px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-top: 0.7em;
+    margin-bottom: 1em;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3882f6;
+    color: #e5e7eb;
+    padding: 0.7em 2em;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* MORE INFO SECTION */
+
+.more-info {
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+}
+
+.more-info-container {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more-info-tiles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+    margin-top: 1.5em;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tile img {
+    border-radius: 8px;
+}
+
+.tile figcaption {
+    padding-top: 0.5em;
+}
+
+/* TESTIMONIAL SECTION */
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 0;
+    color: #1f2937;
+    background-color: #e5e7eb;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+}
+
+.quote {
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
+}
+
+.author {
+    font-weight: bold;
+    align-self: flex-end;
+    margin: 10px 10px 0 0;
+}
+
+/* CALL TO ACTION SECTION */
+
+.cta {
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+}
+
+.cta-container {
+    background-color: #3882f6;
+    color: #f9faf8;
+    width: 1000px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em;
+}
+
+.cta-button {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 2em 0;
+}
