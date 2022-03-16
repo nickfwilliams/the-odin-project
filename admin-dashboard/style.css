@@ -1,0 +1,206 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*----- UTILITY CLASSES -----*/
+
+.bold {
+  font-weight: 700;
+}
+
+/*----- TYPOGRAPHY ----- */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: rgb(20, 30, 39);
+}
+
+/*----- LAYOUT ----- */
+
+.page-grid {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 0.3fr 1fr 0.1fr;
+  grid-template-areas:
+    "aside header header"
+    "aside projects secondary-info"
+    "aside footer footer";
+}
+
+#aside {
+  background-color: rgb(32, 50, 57);
+  grid-area: aside;
+  grid-template-rows: min-content 1fr;
+}
+
+#header {
+  background-color: rgb(238, 237, 222);
+  grid-area: header;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 0.5em;
+}
+
+.header__upper {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content max-content;
+  justify-items: center;
+  align-items: center;
+  padding: 0.5em 2em;
+  gap: 1rem;
+}
+
+.header__lower {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content max-content;
+  align-items: center;
+  padding-inline: 2em;
+  gap: 1rem;
+}
+
+#projects {
+  background-color: rgb(224, 221, 170);
+  grid-area: projects;
+}
+
+#secondary-info {
+  background-color: lightgoldenrodyellow;
+  grid-area: secondary-info;
+}
+
+#footer {
+  background-color: rgb(238, 237, 222);
+  grid-area: footer;
+}
+
+.iconify {
+  display: inline;
+}
+
+/*----- SIDEBAR ----- */
+
+aside {
+  padding: 1em;
+  color: white;
+}
+
+.aside__logo {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.aside__nav {
+  margin-top: 2em;
+}
+
+aside a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+aside a:hover {
+  text-decoration: underline;
+  color: rgb(224, 221, 170);
+}
+
+aside ul {
+  list-style-type: none;
+  align-items: center;
+  padding-inline-start: 0px;
+}
+
+aside li {
+  padding: 0.7em;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1em;
+}
+
+/*----- HEADER ----- */
+
+header img {
+  width: 50px;
+  border-radius: 25px;
+  border: 1px solid rgb(20, 30, 39);
+}
+
+input {
+  width: 80%;
+  border-radius: 15px;
+  border: none;
+  justify-self: start;
+}
+
+header a {
+  color: rgb(238, 237, 222);
+  background-color: rgb(32, 50, 57);
+  padding: 0.25em 1em;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header h2 {
+  font-size: 0.8rem;
+}
+
+header span {
+  display: block;
+  font-size: 1.2rem;
+}
+
+/*----- PROJECTS ----- */
+/*----- SECONDARY INFO ----- */
+/*----- FOOTER ----- */
+/*----- LAYOUT ----- */
+/*----- LAYOUT ----- */
+/*----- LAYOUT ----- */
