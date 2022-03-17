@@ -63,21 +63,69 @@ body {
 /*----- LAYOUT ----- */
 
 .page-grid {
+  height: 100vh;
   display: grid;
-  gap: 0.5em;
-  grid-template-columns: 0.3fr 1fr 0.3fr;
-  grid-template-rows: 0.3fr 1fr 0.1fr;
+  grid-template-columns: minmax(250px, 0.4fr) 2fr minmax(300px, 0.4fr);
+  /* grid-template-rows: 0.3fr 1fr 0.1fr; */
   grid-template-areas:
     "aside header header"
     "aside projects secondary-info"
     "aside footer footer";
 }
 
+.iconify {
+  display: inline;
+}
+
+/*----- SIDEBAR ----- */
+
 #aside {
   background-color: rgb(32, 50, 57);
   grid-area: aside;
   grid-template-rows: min-content 1fr;
 }
+
+aside {
+  padding: 1em;
+  color: white;
+}
+
+.aside__logo {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.aside__nav {
+  margin-top: 2em;
+}
+
+aside a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+aside a:hover {
+  text-decoration: underline;
+  color: rgb(240, 165, 0);
+}
+
+aside ul {
+  list-style-type: none;
+  align-items: center;
+  padding-inline-start: 0px;
+}
+
+aside li {
+  padding: 0.7em;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1em;
+}
+
+/*----- HEADER ----- */
 
 #header {
   background-color: rgb(238, 237, 222);
@@ -104,73 +152,10 @@ body {
   gap: 1rem;
 }
 
-#projects {
-  background-color: rgb(224, 221, 170);
-  grid-area: projects;
-}
-
-#secondary-info {
-  background-color: lightgoldenrodyellow;
-  grid-area: secondary-info;
-}
-
-#footer {
-  background-color: rgb(238, 237, 222);
-  grid-area: footer;
-}
-
-.iconify {
-  display: inline;
-}
-
-/*----- SIDEBAR ----- */
-
-aside {
-  padding: 1em;
-  color: white;
-}
-
-.aside__logo {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.aside__nav {
-  margin-top: 2em;
-}
-
-aside a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-aside a:hover {
-  text-decoration: underline;
-  color: rgb(224, 221, 170);
-}
-
-aside ul {
-  list-style-type: none;
-  align-items: center;
-  padding-inline-start: 0px;
-}
-
-aside li {
-  padding: 0.7em;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 1em;
-}
-
-/*----- HEADER ----- */
-
 header img {
   width: 50px;
   border-radius: 25px;
-  border: 1px solid rgb(20, 30, 39);
+  border: 1px solid rgb(50, 60, 68);
 }
 
 input {
@@ -178,15 +163,25 @@ input {
   border-radius: 15px;
   border: none;
   justify-self: start;
+  border: 1px solid rgb(32, 50, 57);
+  padding-left: 1em;
 }
 
-header a {
+.header__upper a {
+  cursor: pointer;
+}
+
+.header__lower a {
   color: rgb(238, 237, 222);
-  background-color: rgb(32, 50, 57);
+  background-color: rgb(228, 88, 38);
   padding: 0.25em 1em;
   border-radius: 25px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.header__lower a:hover {
+  background-color: rgb(240, 165, 0);
 }
 
 header h2 {
@@ -199,8 +194,151 @@ header span {
 }
 
 /*----- PROJECTS ----- */
+
+#projects {
+  background-color: rgb(224, 221, 170);
+  grid-area: projects;
+  padding: 1em;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  padding: 0.5em;
+}
+
+.project-card {
+  display: grid;
+  grid-template-rows: max-content 1fr 30px;
+  background-color: rgb(238, 237, 222);
+  border-left: 6px solid rgb(228, 88, 38);
+  border-radius: 5px;
+  padding: 1.5em;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.15);
+}
+
+.project-card p {
+  font-size: 0.8rem;
+}
+
+.project-card-icons a {
+  cursor: pointer;
+}
+
+.project-card-icons {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 0.75em;
+  place-self: end;
+}
+
 /*----- SECONDARY INFO ----- */
+
+#secondary-info {
+  background-color: rgb(224, 221, 170);
+  grid-area: secondary-info;
+  padding: 1em;
+}
+
+#secondary-info h3 {
+  margin-bottom: 0.5em;
+}
+
+/* Announcements */
+
+.announcements {
+  background-color: rgb(238, 237, 222);
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.15);
+  margin-bottom: 2em;
+}
+
+.announcements__heading {
+  font-size: 0.75rem;
+}
+
+.announcements a {
+  cursor: pointer;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.announcements a:hover {
+  text-decoration: underline;
+}
+
+.announcements a:visited {
+  color: rgb(0, 0, 0, 0.15);
+}
+
+.announcements__text {
+  font-size: 0.7rem;
+  border-bottom: 1px solid rgb(64, 67, 70);
+  padding-bottom: 0.75em;
+}
+
+.announcements .borderless {
+  border-bottom: none;
+}
+
+/* Trending */
+
+.trending {
+  background-color: rgb(238, 237, 222);
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.trending__item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75em;
+  align-items: center;
+}
+
+.trending img {
+  border-radius: 25px;
+  width: 40px;
+}
+
+.trending p {
+  font-size: 0.7rem;
+}
+
+.trending a {
+  text-decoration: none;
+}
+
+.trending a:hover {
+  text-decoration: underline;
+}
+
+.trending a:visited {
+  color: rgb(0, 0, 0, 0.15);
+}
+
+.trending span {
+  display: block;
+  opacity: 0.75;
+}
+
 /*----- FOOTER ----- */
+
+#footer {
+  grid-area: footer;
+  background-color: rgb(238, 237, 222);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5em;
+}
+
 /*----- LAYOUT ----- */
 /*----- LAYOUT ----- */
 /*----- LAYOUT ----- */
