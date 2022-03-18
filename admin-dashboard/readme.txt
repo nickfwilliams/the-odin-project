@@ -1,0 +1,3 @@
+A grid based admin-dashboard written as part of The Odin Project assignments.
+
+This task was to use GRID rather than FLEX for the layout, hence some unusual display choices...
