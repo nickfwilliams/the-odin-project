@@ -263,6 +263,7 @@ header span {
   cursor: pointer;
   margin-top: 1em;
   display: inline-block;
+  color: #e45827;
 }
 
 .announcements a:hover {
@@ -313,6 +314,7 @@ header span {
 
 .trending a {
   text-decoration: none;
+  color: #000;
 }
 
 .trending a:hover {
