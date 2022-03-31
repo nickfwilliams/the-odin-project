@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 
+    Helvetica Neue, 
+    Helvetica, 
+    Arial, 
+    sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0; margin: 0;
+}
+
+/* Remove browser defaults */
+
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input:focus {
+        outline: none;
+}
+
+/* Reapply desired styling */
+
+input[type="search"] {
+  padding: 1em;
+  width: 40%;
+  height: 40px;
+  border: 2px solid forestgreen;
+  border-radius: 25px;
+
+}
+
+/* Show user the search bar is active on focus or hover */
+
+input:focus-visible, input:hover {
+  background-color: rgb(216, 241, 216); 
+}
+
+/* Flex container to position search img */
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    margin-left: 10px;
+}
+    </style>
+    
+</head>
+<body>
+    <form>
+        <input type="search" name="search" id="search" aria-label="Search our site">
+        <div><img src="search-24px.png"></div>
+      </form>
+
+</body>
+</html>
