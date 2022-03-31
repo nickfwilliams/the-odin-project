@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0; margin: 0;
+}
+
+label {
+  color: rgb(71, 71, 71);
+}
+
+li {
+  list-style: none;
+}
+
+/* Remove default browser styles */
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    vertical-align: -2px;
+    outline: none;
+  }
+
+input[type="radio"]::before {
+  display: block;
+  content:" ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: turquoise;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+    </style>
+    
+</head>
+<body>
+    <form>
+      <form>
+        <fieldset>
+          <legend>Who is your favorite pony?</legend>
+          <ul>
+            <li>
+              <label for="pinkie">Pinkie Pie</label>
+              <input type="radio" id="pinkie" name="pony" value="pinkie">
+            </li>
+            <li>
+              <label for="rainbow">Rainbow Dash</label>
+              <input type="radio" id="rainbow" name="pony" value="rainbow">
+            </li>
+            <li>
+              <label for="twilight">Twilight Sparkle</label>
+              <input type="radio" id="twilight" name="pony" value="twilight">
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+          
+      </form>
+
+</body>
+</html>
