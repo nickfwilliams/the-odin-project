@@ -57,7 +57,7 @@ h2 {
 }
 
 .left-column {
-    background-image: url('/images/norse-fire.jpg');
+    background-image: url('images/norse-fire.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-width: 30%;
