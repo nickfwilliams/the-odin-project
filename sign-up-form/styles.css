@@ -37,10 +37,6 @@
     url(/fonts/norse-bold-webfont.woff2) format('woff2');
   }
 
-/* Form Resets */
-
-
-
 /* Layout */
 
 body {
@@ -51,9 +47,14 @@ h1 {
     font-size: 3rem;
 }
 
+h2 {
+  font-family: norse;
+}
+
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    border: 1px solid red;
 }
 
 .left-column {
@@ -84,10 +85,12 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    min-width: 70%;
     background-color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1rem;
+    padding: 2em 0;
+    border: 2px dashed hotpink;
 }
 
 .right-column p {
@@ -102,6 +105,7 @@ form {
     background-color: #FAF9F6;
     margin-block: 2.5em;
     padding: 1.5em;
+    width: 100%;
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
 }
@@ -111,8 +115,7 @@ form {
 }
 
 .column {
-  /* border: 1px solid black; */
-  width: 40%;
+  width: 350px;
   float: left;
 }
 
@@ -122,12 +125,42 @@ input, label {
 
 input {
   width: 15em;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 0.2em;
+}
+
+input:invalid {
+  background-color: rgb(252, 225, 229);
+  border: 2px solid red;
+  display: inline-block;
+}
+
+input:valid {
+  display: inline-block;
+}
+
+input:invalid + span::before {
+  content: '✖';
+  color: red;
+}
+
+input:valid + span::before {
+  content: '✓';
+  color: green;
+}
+
+input:focus {
+  border: 2px solid #2935b8;
+  background-color: rgb(246, 247, 229);
 }
 
 label {
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-top: 1em;
+  margin-bottom: .2em;
 }
 
 button {
@@ -140,4 +173,10 @@ button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+  background-color: #e29315;
+  transition: 200ms ease-in;
 }
