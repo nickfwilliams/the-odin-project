@@ -95,12 +95,16 @@ h2 {
   margin-left: 1.5em;
 }
 
+.right-column a {
+  color: ##db4010;
+}
+
 .right-column span {
   font-weight: bold;
 }
 
 form {
-    background-color: #FAF9F6;
+    background-color: #faf4ea;
     margin-block: 2.5em;
     padding: 1.5em;
     width: 100%;
@@ -131,7 +135,7 @@ input {
 
 input:invalid {
   background-color: rgb(252, 225, 229);
-  border: 2px solid red;
+  border: 2px solid #ff0000;
   display: inline-block;
 }
 
@@ -141,17 +145,17 @@ input:valid {
 
 input:invalid + span::before {
   content: '✖';
-  color: red;
+  color: #ff0000;
 }
 
 input:valid + span::before {
   content: '✓';
-  color: green;
+  color: #008000;
 }
 
 input:focus {
   border: 2px solid #2935b8;
-  background-color: rgb(246, 247, 229);
+  background-color: #f6f7e5;
 }
 
 label {
@@ -167,7 +171,7 @@ label {
     margin-left: 1.5em;
     margin-bottom: 1em;
     color: #fff;
-    background-color: #DB4010;
+    background-color: #db4010;
     border-radius: 5px;
     text-align: center;
 }
