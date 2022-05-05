@@ -17,4 +17,13 @@ button {
   color: black;
   font-size: small;
   text-align: center;
+
+  transition-property: font-size;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+}
+
+button:hover {
+  font-size: 150%;
 }
